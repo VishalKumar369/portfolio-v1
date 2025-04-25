@@ -18,7 +18,6 @@ for (let i = 0; i < totalNavList; i++) {
        removeBackSection()
         for (let j = 0; j < totalNavList; j++) {
             if(navlist[j].querySelector("a").classList.contains("active")){
-                // allSection[j].classList.add("back-section");
                 addBackSection(j);
             }
             navlist[j].querySelector("a").classList.remove("active");
@@ -59,7 +58,6 @@ function updateNav(element){
 }
 document.querySelector(".hire-me").addEventListener("click", function(){
     const sectionIndex = this.getAttribute("data-section-index");
-    // console.log(sectionIndex)
     showSection(this);
     updateNav(this);
     removeBackSection();
