@@ -22,7 +22,7 @@ async function loadSections() {
   const typedTarget = document.querySelector(".typing");
   if (typedTarget) {
     new Typed(".typing", {
-      strings: ["", "Web Designer", "Web Developer", "Graphics Designer"],
+      strings: ["", "Web Designer", "Web Developer", "Frontend Developer", "Backend Developer", "Full Stack Developer"],
       typeSpeed: 100,
       backSpeed: 60,
       loop: true,
