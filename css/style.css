@@ -1,19 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
-    --bg-black-900: #f2f2fc;
-    --bg-black-100: #fdf9ff;
-    --bg-black-50: #e8dfec;
-    --text-black-900: #302e4d;
-    --text-black-700: #504e70;
-}
-
-body.dark{
     --bg-black-900: #151515;
     --bg-black-100: #222222;
     --bg-black-50: #393939;
     --text-black-900: #ffffff;
     --text-black-700: #e9e9e9;
+}
+
+body.light{
+    --bg-black-900: #f2f2fc;
+    --bg-black-100: #fdf9ff;
+    --bg-black-50: #e8dfec;
+    --text-black-900: #302e4d;
+    --text-black-700: #504e70;
 }
 body {
     line-height: 1.5;
@@ -119,6 +119,11 @@ section .container{
     flex-wrap: wrap;
     margin: 0px -15px;
     position: relative;
+}
+
+.col{
+    display: flex;
+    flex-direction: column;
 }
 .btn{
     font-size: 16px;
@@ -449,7 +454,7 @@ h3.my-profession{
 .about .about-content .education,
 .about .about-content .experience{
     flex: 0 0 50%;
-    max-width: 50%;
+    max-width: 100%;
     margin-top: 30px;
 }
 .about .about-content h3.title{
@@ -507,6 +512,25 @@ h3.my-profession{
 }
 .about .about-content .timeline .timeline-date .fa{
     margin-right: 5px;
+}
+.timeline-title-ed{
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: capitalize;
+    color: var(--text-black-900);
+}
+.mb{
+    margin-bottom: 15px;
+}
+.course-work{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    
+}
+
+.course-work>li{
+    color: var(--text-black-700);
+    
 }
 .about .about-content .timeline .timeline-title{
     font-weight: 700;
