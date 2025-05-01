@@ -381,12 +381,16 @@ h3.my-profession{
     color: var(--text-black-700);
 }
 .about .about-content .personal-info{
-    flex:0 0 60%;
-    max-width: 60%;
+    /* flex:0 0 60%;
+    max-width: 60%; */
     margin-top: 40px;
 }
+.personal-info h3{
+    color: var(--text-black-700);
+    margin-bottom: 20px;
+}
 .about .about-content .personal-info .info-item{
-    flex:  0 0 50%;
+    flex:  0 0 20%;
     max-width: 50%;
 }
 .about .about-content .personal-info .info-item p{
@@ -530,7 +534,9 @@ h3.my-profession{
 
 .course-work>li{
     color: var(--text-black-700);
-    
+}
+.timeline-title>a{
+    color: var(--text-black-900);
 }
 .about .about-content .timeline .timeline-title{
     font-weight: 700;
@@ -563,6 +569,7 @@ h3.my-profession{
     padding: 30px 15px;
     text-align: center;
     transition: all 0.3s ease;
+    height: 100%;
 }
 
 .service .service-item .service-item-inner:hover{

@@ -1,4 +1,4 @@
-const sections = ["home", "about", "services", "portfolio", "contact"]; // match IDs in index.html
+const sections = ["home", "about", "services", "portfolio", "contact"];
 
 // Load all sections dynamically into their respective containers
 async function loadSections() {
@@ -22,7 +22,14 @@ async function loadSections() {
   const typedTarget = document.querySelector(".typing");
   if (typedTarget) {
     new Typed(".typing", {
-      strings: ["", "Web Designer", "Web Developer", "Frontend Developer", "Backend Developer", "Full Stack Developer"],
+      strings: [
+        "",
+        "Web Designer",
+        "Web Developer",
+        "Frontend Developer",
+        "Backend Developer",
+        "Full Stack Developer",
+      ],
       typeSpeed: 100,
       backSpeed: 60,
       loop: true,
@@ -43,6 +50,9 @@ function initNavigation() {
       updateNavActive(link);
       updateBackSection(target);
       setActiveSection(target);
+      aside.classList.toggle("open");
+      navTogglerBtn.classList.toggle("open");
+      allSections.forEach((section) => section.classList.toggle("open"));
     });
   });
 
