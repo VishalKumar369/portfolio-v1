@@ -1,6 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
+  --bg-black-900: #f2f2fc;
+  --bg-black-100: #fdf9ff;
+  --bg-black-50: #e8dfec;
+  --text-black-900: #302e4d;
+  --text-black-700: #504e70;
+}
+
+body.light {
   --bg-black-900: #151515;
   --bg-black-100: #222222;
   --bg-black-50: #393939;
@@ -8,13 +16,6 @@
   --text-black-700: #e9e9e9;
 }
 
-body.light {
-  --bg-black-900: #f2f2fc;
-  --bg-black-100: #fdf9ff;
-  --bg-black-50: #e8dfec;
-  --text-black-900: #302e4d;
-  --text-black-700: #504e70;
-}
 body {
   line-height: 1.5;
   font-size: 16px;
@@ -33,12 +34,15 @@ body {
 ::after {
   box-sizing: border-box;
 }
+
 .padd-15 {
   padding: 0px 15px;
 }
+
 .hidden {
   display: none !important;
 }
+
 section {
   background-color: var(--bg-black-900);
   min-height: 100vh;
@@ -55,9 +59,11 @@ section {
   overflow-x: hidden;
   transition: all 0.3s ease;
 }
+
 section.back-section {
   z-index: 1;
 }
+
 section.active {
   z-index: 2;
   opacity: 1;
@@ -68,19 +74,23 @@ section.active {
   0% {
     transform: translateX(100%);
   }
+
   100% {
     transform: translateX(0%);
   }
 }
+
 section .container {
   padding-top: 60px;
   padding-bottom: 70px;
 }
+
 .section-title {
   flex: 0 0 100%;
   max-width: 100%;
   margin-bottom: 60px;
 }
+
 .section-title h2 {
   font-size: 40px;
   color: var(--text-black-900);
@@ -97,6 +107,7 @@ section .container {
   top: 100%;
   left: 0;
 }
+
 .section-title h2::after {
   content: "";
   height: 4px;
@@ -107,11 +118,13 @@ section .container {
   left: 0;
   margin-top: 8px;
 }
+
 .container {
   max-width: 1100px;
   width: 100%;
   margin: auto;
 }
+
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -123,6 +136,7 @@ section .container {
   display: flex;
   flex-direction: column;
 }
+
 .btn {
   font-size: 16px;
   font-weight: 500;
@@ -135,12 +149,15 @@ section .container {
   transition: all 0.3s ease;
   border: none;
 }
+
 .btn:hover {
   transform: scale(1.05);
 }
+
 .shadow-dark {
   box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
 }
+
 /* aside */
 .aside {
   background-color: var(--bg-black-100);
@@ -189,6 +206,7 @@ aside .nav-toggler span {
   display: inline-block;
   position: relative;
 }
+
 aside .nav-toggler.open span {
   background-color: transparent;
 }
@@ -202,6 +220,7 @@ aside .nav-toggler span::before {
   top: -6px;
   left: 0;
 }
+
 aside .nav-toggler.open span::before {
   transform: rotate(45deg);
   top: 0;
@@ -216,6 +235,7 @@ aside .nav-toggler span::after {
   top: 6px;
   left: 0;
 }
+
 aside .nav-toggler.open span::after {
   transform: rotate(-45deg);
   top: 0;
@@ -263,6 +283,7 @@ aside .logo a::after {
 
 aside .nav {
   margin-top: 50px;
+  /* width: 100%; */
 }
 
 aside .nav li {
@@ -298,30 +319,37 @@ aside .nav li a i {
   flex: 0 0 60%;
   width: 60%;
 }
+
 h3.hello {
   font-size: 28px;
   margin: 15px 0px;
 }
+
 h3.hello span {
   font-family: "Clicker Script", cursive;
   font-size: 30px;
   font-weight: 700;
   color: var(--skin-color);
 }
+
 h3.my-profession {
   font-size: 30px;
   margin: 15px 0px;
 }
+
 .typing {
   color: var(--skin-color);
 }
+
 .social-media {
   position: absolute;
-  bottom: 2rem;
+  bottom: 1rem;
   display: flex;
   gap: 1.5rem;
   justify-content: center;
   width: 100%;
+  border-top: 0.5px solid var(--bg-black-50);
+  padding-top: 1rem;
 }
 
 .social-media .icon {
@@ -339,42 +367,48 @@ h3.my-profession {
   transform: scale(1.1);
 }
 
-.home-info > p {
+.home-info>p {
   margin-bottom: 70px;
   font-size: 20px;
   color: var(--text-black-700);
 }
+
 .home .home-img {
   flex: 0 0 40%;
   width: 40%;
   text-align: center;
   position: relative;
 }
+
 .home-img::after {
+  /* display: none; */
   content: "";
   position: absolute;
-  height: 80px;
-  width: 80px;
+  /* height: 80px; */
+  width: 242.5px;
   border-bottom: 10px solid var(--skin-color);
   border-right: 10px solid var(--skin-color);
-  right: 32px;
-  bottom: 32px;
+  right: 96px;
+  bottom: 34px;
 }
+
 .home-img::before {
   content: "";
   position: absolute;
-  height: 80px;
-  width: 80px;
+  /* height: 80px; */
+  width: 242.5px;
   border-top: 10px solid var(--skin-color);
   border-left: 10px solid var(--skin-color);
-  left: 32px;
-  top: -40px;
+  left: 96px;
+  top: -7px;
 }
+
 .home .home-img img {
   margin: auto;
-  border-radius: 5px;
+  /* border-radius: 5px; */
   height: 300px;
-  width: 290px;
+  /* width: 290px; */
+  object-fit: contain
 }
 
 /* About */
@@ -394,27 +428,33 @@ h3.my-profession {
   font-weight: 700;
   color: var(--text-black-900);
 }
+
 .about .about-content .about-text h3 span {
   color: var(--skin-color);
 }
+
 .about .about-content .about-text p {
   font-size: 16px;
   line-height: 25px;
   color: var(--text-black-700);
 }
+
 .about .about-content .personal-info {
   /* flex:0 0 60%;
     max-width: 60%; */
   margin-top: 40px;
 }
+
 .personal-info h3 {
   color: var(--text-black-700);
   margin-bottom: 20px;
 }
+
 .about .about-content .personal-info .info-item {
   flex: 0 0 20%;
   max-width: 50%;
 }
+
 .about .about-content .personal-info .info-item p {
   font-weight: 600;
   padding: 10px 0;
@@ -422,6 +462,7 @@ h3.my-profession {
   color: var(--text-black-900);
   border-bottom: 1px solid var(--bg-black-50);
 }
+
 .about .about-content .personal-info .info-item p span {
   font-weight: 400;
   color: var(--text-black-700);
@@ -432,6 +473,7 @@ h3.my-profession {
 .about .about-content .personal-info .buttons {
   margin-top: 30px;
 }
+
 .about .about-content .personal-info .buttons .btn {
   margin-top: 10px;
 }
@@ -441,11 +483,13 @@ h3.my-profession {
   max-width: 40%;
   margin-top: 40px;
 }
+
 .about .about-content .skills .skill-item {
   flex: 0 0 100%;
   width: 100%;
   margin-bottom: 25px;
 }
+
 .about .about-content .skills .skill-item h5 {
   line-height: 40px;
   font-weight: 600;
@@ -453,6 +497,7 @@ h3.my-profession {
   color: var(--text-black-900);
   text-transform: capitalize;
 }
+
 .about .about-content .skills .skill-item .progress {
   background-color: var(--bg-black-50);
   height: 7px;
@@ -460,6 +505,7 @@ h3.my-profession {
   width: 100%;
   position: relative;
 }
+
 .about .about-content .skills .skill-item .progress .progress-in {
   position: absolute;
   left: 0;
@@ -468,6 +514,7 @@ h3.my-profession {
   border-radius: 4px;
   background-color: var(--skin-color);
 }
+
 .about .about-content .skills .skill-item .progress .skill-percent {
   position: absolute;
   right: 0;
@@ -483,6 +530,7 @@ h3.my-profession {
   max-width: 100%;
   margin-top: 30px;
 }
+
 .about .about-content h3.title {
   font-size: 24px;
   margin-bottom: 30px;
@@ -509,9 +557,11 @@ h3.my-profession {
   padding-left: 37px;
   padding-bottom: 50px;
 }
+
 .about .about-content .timeline .timeline-item:last-child {
   padding-bottom: 0;
 }
+
 .about .about-content .timeline .timeline-item::before {
   content: "";
   width: 1px;
@@ -521,6 +571,7 @@ h3.my-profession {
   top: 0px;
   background-color: var(--skin-color);
 }
+
 .about .about-content .timeline .circle-dot {
   position: absolute;
   left: 0;
@@ -530,35 +581,42 @@ h3.my-profession {
   border-radius: 50%;
   background-color: var(--skin-color);
 }
+
 .about .about-content .timeline .timeline-date {
   font-weight: 400;
   font-size: 14px;
   margin-bottom: 12px;
   color: var(--text-black-700);
 }
+
 .about .about-content .timeline .timeline-date .fa {
   margin-right: 5px;
 }
+
 .timeline-title-ed {
   font-weight: 700;
   font-size: 18px;
   text-transform: capitalize;
   color: var(--text-black-900);
 }
+
 .mb {
   margin-bottom: 15px;
 }
+
 .course-work {
   display: grid;
   grid-template-columns: auto auto auto auto;
 }
 
-.course-work > li {
+.course-work>li {
   color: var(--text-black-700);
 }
-.timeline-title > a {
+
+.timeline-title>a {
   color: var(--text-black-900);
 }
+
 .about .about-content .timeline .timeline-title {
   font-weight: 700;
   font-size: 18px;
@@ -581,21 +639,23 @@ h3.my-profession {
   filter: blur(4px);
   transition: filter 0.2s ease-in-out;
 }
+
 .service-item:hover {
   transform: scale(1.02);
   z-index: 1;
 }
-///
 
 .service .container {
   padding-bottom: 40px;
 }
+
 .service .service-item {
   margin-bottom: 30px;
   flex: 0 0 33.33%;
   max-width: 33.33%;
   transition: transform 0.2s ease, filter 0.2s ease;
 }
+
 .service .service-item .service-item-inner {
   background-color: var(--bg-black-100);
   border: 1px solid var(--bg-black-50);
@@ -619,19 +679,23 @@ h3.my-profession {
   text-align: center;
   transition: all 0.3s ease;
 }
+
 .service .service-item .service-item-inner .icon .fa {
   font-size: 40px;
   line-height: 60px;
   color: var(--skin-color);
   transition: all 0.3s ease;
 }
+
 .service .service-item .service-item-inner:hover .icon {
   background-color: var(--skin-color);
 }
+
 .service .service-item .service-item-inner:hover .icon .fa {
   font-size: 24px;
   color: #fff;
 }
+
 .service .service-item .service-item-inner h4 {
   font-size: 18px;
   margin-bottom: 15px;
@@ -639,6 +703,7 @@ h3.my-profession {
   font-weight: 700;
   text-transform: capitalize;
 }
+
 .service .service-item .service-item-inner p {
   font-size: 16px;
   color: var(--text-black-700);
@@ -649,26 +714,31 @@ h3.my-profession {
 .portfolio .container {
   padding-bottom: 40px;
 }
+
 .portfolio .portfolio-heading {
   flex: 0 0 100%;
   max-width: 100%;
   margin-bottom: 40px;
 }
+
 .portfolio .portfolio-heading h2 {
   color: var(--text-black-900);
   font-weight: 500;
 }
+
 .portfolio .portfolio-item {
   flex: 0 0 33.33%;
   max-width: 33.33%;
   margin-bottom: 30px;
 }
+
 .portfolio .portfolio-item-inner {
   border: 6px solid var(--bg-black-100);
   border-radius: 10px;
   overflow: hidden;
   cursor: pointer;
 }
+
 .portfolio .portfolio-item-inner .portfolio-img img {
   width: 100%;
   display: block;
@@ -681,6 +751,7 @@ h3.my-profession {
   font-size: 25px;
   margin-bottom: 20px;
 }
+
 .contact-sub-title {
   color: var(--text-black-900);
   text-align: center;
@@ -694,13 +765,16 @@ h3.my-profession {
   text-align: center;
   margin-bottom: 60px;
 }
+
 .contact .contact-info-item .icon {
   display: inline-block;
 }
+
 .contact .contact-info-item .icon .fa {
   font-size: 25px;
   color: var(--skin-color);
 }
+
 .contact .contact-info-item h4 {
   font-size: 18px;
   font-weight: 700;
@@ -708,6 +782,7 @@ h3.my-profession {
   text-transform: capitalize;
   margin: 15px 0 5px;
 }
+
 .contact .contact-info-item p {
   font-size: 16px;
   line-height: 25px;
@@ -719,14 +794,17 @@ h3.my-profession {
   flex: 0 0 100%;
   max-width: 100%;
 }
+
 .contact .contact-form .col-6 {
   flex: 0 0 50%;
   max-width: 50%;
 }
+
 .contact .contact-form .col-12 {
   flex: 0 0 100%;
   max-width: 100%;
 }
+
 .contact .contact-form .form-item {
   margin-bottom: 30px;
 }
@@ -742,9 +820,11 @@ h3.my-profession {
   color: var(--text-black-700);
   transition: all 0.3s ease;
 }
+
 .contact .contact-form .form-item .form-control:focus {
   box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
 }
+
 .contact .contact-form .form-item textarea.form-control {
   height: 140px;
 }
@@ -753,45 +833,58 @@ h3.my-profession {
   height: 50px;
   padding: 0 50px;
 }
+
 @media (max-width: 1199px) {
   .section .container {
     padding-top: 70px;
   }
+
   .aside {
     left: -270px;
   }
+
   .aside.open {
     left: 0;
   }
+
   .aside .nav-toggler {
     display: flex;
     left: 30px;
   }
+
   .aside .nav-toggler.open {
     left: 300px;
   }
+
   section {
     left: 0;
   }
+
   section.open {
     left: 270px;
   }
+
   .about .about-content .personal-info .info-item p span {
     display: block;
     margin-left: 0;
   }
+
   .about .about-content .personal-info .info-item {
     flex: 0 0 33%;
   }
+
   .course-work {
     grid-template-columns: auto auto auto;
   }
 }
+
 @media (max-width: 991px) {
+
   .about .about-content .education,
   .about .about-content .experience {
     padding: 0px;
   }
+
   .contact .contact-info-item,
   .portfolio .portfolio-item,
   .service .service-item {
@@ -803,18 +896,22 @@ h3.my-profession {
     flex: 0 0 100%;
     max-width: 100%;
   }
+
   .home .home-img {
     display: none;
   }
+
   .about .about-content .personal-info .info-item {
     flex: 0 0 50%;
   }
+
   .course-work {
     grid-template-columns: auto;
   }
 }
 
 @media (max-width: 767px) {
+
   .contact .contact-form .col-6,
   .contact .contact-info-item,
   .portfolio .portfolio-item,
